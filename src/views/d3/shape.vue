@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import Chart from '@/components/d3/d3Force'
+import Chart from '@/components/d3/d3Shape'
 
 export default {
-  name: 'D3Force',
+  name: 'D3Shape',
   components: { Chart }
 }
 </script>

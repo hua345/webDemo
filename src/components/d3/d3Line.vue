@@ -1,13 +1,20 @@
 <template>
-  <div id="d3-line"></div>
+  <div id="d3-line" />
 </template>
 
 <script>
 import * as d3 from "d3";
 const data = [99, 71, 78, 25, 36, 92];
-
+const points = [
+  [0, 80],
+  [100, 100],
+  [200, 30],
+  [300, 50],
+  [400, 40],
+  [500, 80],
+];
 export default {
-  name: "non-vue-line-chart",
+  name: "NonVueLineChart",
   mounted() {
     const svg = d3
       .select(this.$el)
@@ -17,6 +24,7 @@ export default {
       .append("g")
       .attr("transform", "translate(0, 10)");
 
+    // 折线
     const x = d3.scaleLinear().range([0, 430]);
     const y = d3.scaleLinear().range([210, 0]);
     d3.axisLeft().scale(x);
@@ -27,7 +35,22 @@ export default {
       .line()
       .x((d, i) => x(i))
       .y((d) => y(d));
+    console.log(createPath);
     svg.append("path").attr("d", createPath(data));
+    // 曲线
+    var lineGenerator = d3.line().curve(d3.curveCardinal);
+    var pathData = lineGenerator(points);
+    console.log(pathData);
+
+    svg.append("path").attr("d", pathData);
+    // canvas线
+    var context = d3.select(this.$el).append("canvas").node().getContext("2d");
+    lineGenerator.context(context);
+
+    context.strokeStyle = "#999";
+    context.beginPath();
+    lineGenerator(points);
+    context.stroke();
   },
 };
 </script>
