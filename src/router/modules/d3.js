@@ -25,10 +25,16 @@ const d3Router = {
       meta: { title: "d3Force", noCache: true }
     },
     {
-      path: "shape",
-      component: () => import("@/views/d3/shape.vue"),
-      name: "d3Shape",
-      meta: { title: "d3Shape", noCache: true }
+      path: "forceLinks",
+      component: () => import("@/views/d3/forceLinks.vue"),
+      name: "d3ForceLinks",
+      meta: { title: "d3ForceLinks", noCache: true }
+    },
+    {
+      path: "index",
+      component: () => import("@/views/d3/index.vue"),
+      name: "d3index",
+      meta: { title: "d3index", noCache: true }
     }
   ]
 };

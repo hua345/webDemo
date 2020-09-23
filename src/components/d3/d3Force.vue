@@ -9,7 +9,7 @@ const n = 4
 const width = 600
 const height = width
 export default {
-  name: 'D3Force',
+  name: 'd3-force',
   mounted() {
     const k = width / 200
     const r = d3.randomUniform(k, k * 4)

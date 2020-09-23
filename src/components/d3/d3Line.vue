@@ -14,7 +14,7 @@ const points = [
   [500, 80],
 ];
 export default {
-  name: "NonVueLineChart",
+  name: "d3-line",
   mounted() {
     const svg = d3
       .select(this.$el)
@@ -35,19 +35,17 @@ export default {
       .line()
       .x((d, i) => x(i))
       .y((d) => y(d));
-    console.log(createPath);
     svg.append("path").attr("d", createPath(data));
     // 曲线
     var lineGenerator = d3.line().curve(d3.curveCardinal);
     var pathData = lineGenerator(points);
-    console.log(pathData);
 
     svg.append("path").attr("d", pathData);
     // canvas线
     var context = d3.select(this.$el).append("canvas").node().getContext("2d");
     lineGenerator.context(context);
 
-    context.strokeStyle = "#999";
+    context.strokeStyle = "#76BF8A";
     context.beginPath();
     lineGenerator(points);
     context.stroke();
