@@ -25,6 +25,12 @@ const d3Router = {
       meta: { title: 'd3Force', noCache: true }
     },
     {
+      path: 'forceDirected',
+      component: () => import('@/views/d3/forceDirected.vue'),
+      name: 'd3ForceDirected',
+      meta: { title: 'd3ForceDirected', noCache: true }
+    },
+    {
       path: 'forceLinks',
       component: () => import('@/views/d3/forceLinks.vue'),
       name: 'd3ForceLinks',

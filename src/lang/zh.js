@@ -62,6 +62,7 @@ export default {
     d3Line: 'd3曲线和折线',
     d3Force: 'd3模拟碰撞力',
     d3ForceLinks: 'd3模拟弹簧力',
+    d3ForceDirected: 'd3网络模拟弹簧力',
     d3index: 'd3首页'
   },
   navbar: {

@@ -17,21 +17,23 @@
         </router-link>
       </el-col>
       <el-col :sm="24" :md="12" :lg="12">
-        <d3ForceDirected />
+        <router-link to="/d3/forceDirected">
+          <d3ForceDirected />
+        </router-link>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-import D3Line from '@/components/d3/d3Line'
-import D3Force from '@/components/d3/d3Force'
-import d3ForceLinks from '@/components/d3/d3ForceLinks'
-import d3ForceDirected from '@/components/d3/d3ForceDirected'
+import D3Line from "@/components/d3/d3Line";
+import D3Force from "@/components/d3/d3Force";
+import d3ForceLinks from "@/components/d3/d3ForceLinks";
+import d3ForceDirected from "@/components/d3/d3ForceDirected";
 export default {
-  name: 'Index',
-  components: { D3Line, D3Force, d3ForceLinks, d3ForceDirected }
-}
+  name: "Index",
+  components: { D3Line, D3Force, d3ForceLinks, d3ForceDirected },
+};
 </script>
 
 <style scoped>
