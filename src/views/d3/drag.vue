@@ -8,7 +8,7 @@
 import Chart from '@/components/d3/d3Drag'
 
 export default {
-  name: 'd3Drag',
+  name: 'D3Drag',
   components: { Chart }
 }
 </script>
