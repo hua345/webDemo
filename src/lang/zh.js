@@ -23,7 +23,7 @@ export default {
     dragDialog: '拖拽 Dialog',
     dragSelect: '拖拽 Select',
     dragKanban: '可拖拽看板',
-    charts: '图表',
+    echarts: 'Echart图表',
     keyboardChart: '键盘图表',
     lineChart: '折线图',
     mixChart: '混合图表',

@@ -8,7 +8,7 @@ import Layout from '@/layout'
 
 /* Router Modules */
 // import componentsRouter from './modules/components'
-import chartsRouter from './modules/charts'
+import eChartsRouter from './modules/eCharts'
 import d3Router from './modules/d3'
 // import tableRouter from './modules/table'
 
@@ -159,6 +159,10 @@ export const asyncRoutes = [
   //   ]
   // },
 
+  /** when your routing map is too long, you can split it into small modules **/
+  // componentsRouter,
+  eChartsRouter,
+  d3Router,
   {
     path: '/icon',
     component: Layout,
@@ -171,11 +175,6 @@ export const asyncRoutes = [
       }
     ]
   },
-
-  /** when your routing map is too long, you can split it into small modules **/
-  // componentsRouter,
-  chartsRouter,
-  d3Router,
   // tableRouter,
 
   // {
@@ -209,19 +208,6 @@ export const asyncRoutes = [
   //     }
   //   ]
   // },
-
-  {
-    path: '/tab',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/tab/index'),
-        name: 'Tab',
-        meta: { title: 'tab', icon: 'tab' }
-      }
-    ]
-  },
 
   {
     path: '/error',

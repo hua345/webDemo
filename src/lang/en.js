@@ -23,7 +23,7 @@ export default {
     dragDialog: 'Drag Dialog',
     dragSelect: 'Drag Select',
     dragKanban: 'Drag Kanban',
-    charts: 'Charts',
+    echarts: 'echarts',
     keyboardChart: 'Keyboard Chart',
     lineChart: 'Line Chart',
     mixChart: 'Mix Chart',

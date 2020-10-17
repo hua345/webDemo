@@ -2,35 +2,35 @@
 
 import Layout from '@/layout'
 
-const chartsRouter = {
-  path: '/charts',
+const echartsRouter = {
+  path: '/echarts',
   component: Layout,
   redirect: 'noRedirect',
-  name: 'Charts',
+  name: 'echarts',
   meta: {
-    title: 'charts',
+    title: 'echarts',
     icon: 'chart'
   },
   children: [
     {
       path: 'keyboard',
-      component: () => import('@/views/charts/keyboard'),
+      component: () => import('@/views/echarts/keyboard'),
       name: 'KeyboardChart',
       meta: { title: 'keyboardChart', noCache: true }
     },
     {
       path: 'line',
-      component: () => import('@/views/charts/line'),
+      component: () => import('@/views/echarts/line'),
       name: 'LineChart',
       meta: { title: 'lineChart', noCache: true }
     },
     {
       path: 'mix-chart',
-      component: () => import('@/views/charts/mix-chart'),
+      component: () => import('@/views/echarts/mix-chart'),
       name: 'MixChart',
       meta: { title: 'mixChart', noCache: true }
     }
   ]
 }
 
-export default chartsRouter
+export default echartsRouter
